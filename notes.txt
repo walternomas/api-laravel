@@ -1,3 +1,10 @@
 php artisan make:model Post -cmf
 
 php artisan migrate --seed
+
+https://tailwindcss.com/docs/guides/laravel
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+npm run dev
