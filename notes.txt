@@ -14,3 +14,9 @@ php artisan make:controller Api/V1/PostController --api --model=Post
 php artisan route:list --name=posts
 
 php artisan make:resource V1/PostResource
+
+https://www.thisprogrammingthing.com/2020/Working-With-Laravels-SoftDelete-Trait/
+
+    php artisan make:migration add_deleted_at_posts_table
+
+    php artisan migrate

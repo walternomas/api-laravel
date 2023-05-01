@@ -7,6 +7,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 
 use App\Http\Resources\V1\PostResource;
+use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
@@ -48,6 +49,22 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        // $post->delete();
+
+        // return response()->json([
+        //     'message' => 'Success'
+        // ], 204);
+        if ($post->delete()) {
+            return response()->json([
+                'data' => [
+                    'message' => 'Post Deleted'
+                ]
+            ], Response::HTTP_NO_CONTENT);
+        }
+        return response()->json([
+            'data' => [
+                'message' => 'Error deleting Post'
+            ]
+        ], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }
