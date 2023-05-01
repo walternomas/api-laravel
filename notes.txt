@@ -8,3 +8,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 npm run dev
+
+php artisan make:controller Api/V1/PostController --api --model=Post
+
+php artisan route:list --name=posts
