@@ -20,3 +20,7 @@ https://www.thisprogrammingthing.com/2020/Working-With-Laravels-SoftDelete-Trait
     php artisan make:migration add_deleted_at_posts_table
 
     php artisan migrate
+
+php artisan make:controller Api/V2/PostController --api --model=Post
+php artisan make:resource V2/PostResource
+php artisan make:resource V2/PostCollection
